@@ -1,0 +1,74 @@
+🔍 YouTube SQL Project Metadata
+This document contains metadata descriptions of the columns used in the YouTube SQL analysis project. We have used 4 interconnected tables:
+
+youtube_channels.csv
+
+channel_videos.csv
+
+channel_engagement.csv
+
+channel_revenue.csv
+
+--------------------------------------------------------------------------------------------------------------------
+
+📄 Column Description for youtube_channels
+This table contains core metadata about YouTube channels.
+
+channel_id: Unique identifier for each channel
+
+channel_name: Name of the YouTube channel
+
+category: Genre/type of content (e.g., Entertainment, Music)
+
+subscribers: Total number of subscribers for the channel
+
+avg_views: Average views per video on the channel
+
+nox_score: A performance score indicating influencer value and engagement
+
+--------------------------------------------------------------------------------------------------------------------
+
+📄 Column Description for channel_videos
+This table captures information related to individual videos uploaded on each channel.
+
+video_id: Unique identifier for each video
+
+channel_id: Foreign key linking to youtube_channels
+
+video_title: Title or name of the video
+
+upload_date: Date on which the video was uploaded
+
+views: Total views for the video
+
+likes: Total likes received
+
+comments: Total comments received
+
+---------------------------------------------------------------------------------------------------------------------
+
+📄 Column Description for channel_engagement
+This table stores engagement metrics related to each channel’s content.
+
+engagement_id: Unique identifier for each engagement record
+
+channel_id: Foreign key linking to youtube_channels
+
+likes_per_video: Average number of likes per video
+
+comments_per_video: Average comments per video
+
+shares_per_video: Average number of times each video is shared
+
+---------------------------------------------------------------------------------------------------------------------
+
+📄 Column Description for channel_revenue
+This table tracks the revenue performance of each channel.
+
+revenue_id: Unique identifier for the revenue record
+
+channel_id: Foreign key linking to youtube_channels
+
+monthly_revenue: Estimated monthly earnings from the channel
+
+yearly_revenue: Estimated yearly earnings from the channel
